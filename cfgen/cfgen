@@ -482,8 +482,6 @@ Make sure the value of data_iface in the CDF is correct.""")
             if 'meta_data' in d:
                 _assert(d['meta_data'], f"Node {name}: 'io_disks.meta_data'"
                         'must not be an empty string')
-                _assert(d['meta_data'] not in d['data'], f"Node {name}: "
-                        'Meta-data disk must not belong io_disks.data')
 
         disks: List[Disk] = []
         for m0d in node['m0_servers']:
